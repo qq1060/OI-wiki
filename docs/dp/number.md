@@ -34,7 +34,7 @@ int dfs(int x, int st, int op)  // op=1 =;op=0 <
     else
       ret += dfs(x - 1, i, op & (i == maxx));
   }
-  if (!op) f[x][st] = ret;
+  if (!op&&st!=11) f[x][st] = ret;
   return ret;
 }
 int solve(int x) {
